@@ -13,7 +13,7 @@ module Jekyll
         def render(context)
           @config = context.registers[:site].config['mermaid']
           "<script src=\"#{@config['src']}\"></script>"\
-          "<script>mermaid.initialize({startOnLoad:true});</script>"\
+          "<script>mermaid.initialize({startOnLoad:true, useMaxWidth:false});</script>"\
           "<div class=\"mermaid\">#{super}</div>"
         end
       end
